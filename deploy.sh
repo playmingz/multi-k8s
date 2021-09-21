@@ -9,5 +9,5 @@ docker push playmingz/multi-server:$SHA
 docker push playmingz/multi-worker:$SHA
 kubectl apply -f k8s
 kubectl set image deployments/server-deployment server=playmingz/multi-server:$SHA
-kubectl set image deployments/client-deployment client=playmingz/multi-client:$SHA
+kubectl set image deployments/client-deployment client=stephengrider/multi-client:latest
 kubectl set image deployments/worker-deployment worker=playmingz/multi-worker:$SHA
